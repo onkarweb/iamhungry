@@ -1,0 +1,24 @@
+                I am Hungry        
+            1203 Mavis Road    
+              Brampton, ON    
+                  L6P 3W8      
+
+******************************
+Sandwich                  $5.8
+  >6inch
+  >Italian Bread
+  >Cheese Crust
+  >Veg Pattie
+  >Extra Sauce
+  >All Veggies
+
+Wrap                       $11.0
+  >Large
+  >Bacon Chicken
+  >Cheese
+  >Combo Deal*
+
+******************************
+Subtotal:                   $16.8
+Taxes(13%):              $2.18
+Total:                       $18.98

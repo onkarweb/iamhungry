@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-font-size:17pt;
+    -fx-text-fill:red;
+    -fx-font-weight:bold;
+}
+
+.labelPrice{
+    -fx-font-size: 22pt;
+}

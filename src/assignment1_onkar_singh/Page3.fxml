@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="924.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment1_onkar_singh.Page3Controller">
+    <children>
+        <ImageView fitHeight="778.0" fitWidth="1104.0" layoutX="2.0" opacity="0.46" pickOnBounds="true">
+            <image>
+                <Image url="@../images/sand.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="47.0" layoutY="126.0" prefHeight="146.0" prefWidth="373.0" text="Salads" textFill="#804400">
+            <font>
+                <Font name="Matura MT Script Capitals" size="76.0" />
+            </font>
+        </Label>
+        <Button layoutX="41.0" layoutY="616.0" mnemonicParsing="false" onAction="#show2" text="Wraps" />
+        <Button layoutX="41.0" layoutY="685.0" mnemonicParsing="false" onAction="#show1" text="Sandwiches" />
+        <ImageView fitHeight="146.0" fitWidth="367.0" layoutX="340.0" pickOnBounds="true">
+            <image>
+                <Image url="@../images/logo2_trans.png" />
+            </image>
+        </ImageView>
+        <GridPane layoutX="561.0" layoutY="277.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="436.0">
+            <children>
+                <ComboBox fx:id="chicken" disable="true" prefHeight="50.0" prefWidth="251.0" promptText="Chicken type" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <CheckBox fx:id="cheeseCrust" mnemonicParsing="false" text="Cheese " GridPane.rowIndex="2" />
+                <CheckBox fx:id="ComboDeal" mnemonicParsing="false" onAction="#displayPrice" prefHeight="60.0" prefWidth="198.0" text="Combo Deal" GridPane.rowIndex="3" />
+                <RadioButton fx:id="allVeggies" mnemonicParsing="false" text="All Veggies" GridPane.rowIndex="4">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="veggies" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="someVeggies" mnemonicParsing="false" prefHeight="34.0" prefWidth="230.0" text="Some Veggies" toggleGroup="$veggies" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <RadioButton fx:id="large" mnemonicParsing="false" onAction="#displayPrice" selected="true" text="Large">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="size" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="small" mnemonicParsing="false" onAction="#displayPrice" prefHeight="35.0" prefWidth="175.0" text="Small" toggleGroup="$size" GridPane.columnIndex="1" />
+                <CheckBox fx:id="nonVeg" mnemonicParsing="false" onAction="#enableChicken" text="Non-Veg" GridPane.rowIndex="1" />
+                <RadioButton fx:id="eatHeree" mnemonicParsing="false" selected="true" text="Eat Here" GridPane.rowIndex="5">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="eatHere" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="onTheGo" mnemonicParsing="false" text="On the Go" toggleGroup="$eatHere" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="206.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="0.0" prefWidth="230.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="199.0" minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="199.0" minHeight="0.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="236.0" minHeight="4.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+        <GridPane layoutX="103.0" layoutY="267.0" prefHeight="70.0" prefWidth="214.0">
+            <children>
+                <Label styleClass="labelPrice" text="Price:" />
+                <Label fx:id="lblPrice" styleClass="labelPrice" text="\$6.0" GridPane.columnIndex="1" />
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+        <Button layoutX="303.0" layoutY="666.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="63.0" prefWidth="198.0" text="CheckOut" textFill="#804400">
+            <font>
+                <Font name="System Bold" size="29.0" />
+            </font>
+        </Button>
+        <Button layoutX="148.0" layoutY="355.0" mnemonicParsing="false" onAction="#addSalad" text="Add" />
+      <GridPane layoutX="482.0" layoutY="277.0" prefHeight="60.0" prefWidth="84.0">
+         <children>
+            <Label text="Size:" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Line endX="100.0" layoutX="561.0" layoutY="156.0" scaleX="4.0" startX="-100.0" />
+    </children>
+    <stylesheets>
+        <URL value="@page1.css" />
+    </stylesheets>
+</AnchorPane>
